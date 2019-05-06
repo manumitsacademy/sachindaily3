@@ -1,0 +1,5 @@
+.bg-dark{background:#0d4179  !important; }
+.navbar-dark .navbar-nav .nav-link{color:#fff; font-size:14px; margin-right:5px;}
+.nav-link:hover{background:#1e5692; border-radius:4px}
+.active{background:#00b4ea; border-radius:4px; margin:0 0 0 5px}
+.p-r-5{padding-right:5px;}

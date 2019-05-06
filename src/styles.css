@@ -1,2 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    margin:0px;
+    padding:0px;
+    background: #fbfbfb;
+    font-family: Roboto, Arial, sans-serif;
+}
+button {font-size: 14px !important;}
+.m-t-10{margin-top:10px}
+.m-l-10{margin-left:10px}
+.p-r-5{padding-right:5px;}
+.table{color: #232323; font-size: 13px;}
+.table-bordered thead td, .table-bordered thead th {border-bottom-width: 2px; background:#fff; color:#333; font-size:14px;}
+.table td, .table th {vertical-align: middle;}
+.btn-primary{background:#0d4179; border:1px solid #0d4179;}
+.btn-info{background:#00b4ea; border:1px solid #00b4ea}
+.btn-info:hover{background:#0d4179; border:1px solid #0d4179}
+.btn-info.active{background:#0d4179; border:1px solid #0d4179}
+.btn:focus,.btn:active {outline: none !important; box-shadow: none;}
+.fa-window-close{color:#dc3545;}
+.modal-header{background:#0d4179; padding:10px; border-top-left-radius:3px; border-top-right-radius:3px;}
+h4.modal-title{color:#fff; font-size:16px}
+.close {font-size: 24px !important; color: #fff; opacity:1;}
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {opacity: 1; outline:none !important}

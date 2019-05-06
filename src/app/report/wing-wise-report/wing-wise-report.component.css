@@ -1,0 +1,6 @@
+h3{font-size:16px}
+.container-fluid{padding-left:0px; padding-right:0px;}
+.wrapper-wingwise-report{height:540px; overflow:auto}
+.wrapper-flatwise-report{height:540px; overflow:auto}
+#tbl-wingwise-report thead{white-space:nowrap;}
+.delivery-stauts{position:absolute; top:-54px; right:18px;}

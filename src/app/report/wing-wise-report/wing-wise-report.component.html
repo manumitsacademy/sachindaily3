@@ -1,54 +1,73 @@
-
-
-<h3>Delivery Status:{{deliveryStatus| uppercase}}
-  <button (click)="delivered()" *ngIf="deliveryStatus == 'pending'">
-  Click If delivered
-</button></h3>
-<div class="container" id="wingWiseReport">
-  <button (click)="generatePDF('wingWiseReport')">Wing Wise Report 
-    <i class="fa fa-download" aria-hidden="true"></i>
-  </button>
- 
-  <table class="table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th>Wing Name</th>
-        <th *ngFor="let product of products">{{productWiseData[product].name}}</th>
-        <th>Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let d of finalWingWiseReport">
-        <th>{{d.wing}}</th>
-        <td *ngFor="let product of products">{{d[product]}}</td>
-        <th>{{whingWiseTotal(d.wing)}}</th>
-      </tr>      
-    </tbody>
-    <tfoot>
-      <tr>
-        <th>Total</th>
-        <th *ngFor="let product of products">{{productWiseData[product].quantity}}</th>
-      </tr>
-    </tfoot>
-  </table>
-</div>
-<div class="container" id="wingFlatWiseReport">
-  <button (click)="generatePDF('wingFlatWiseReport')">
-    Wing Flat Wise Report
-    <i class="fa fa-download" aria-hidden="true"></i>
-  </button>
-  <table class="table table-bordered table-striped">
-    <tr>
-      <th>Wing</th>
-      <th>flatNumber</th>
-      <th>Product Name</th>
-      <th>Quantity</th>
-    </tr>
-    <tr *ngFor="let subscription of subscriptions">
-      <td>{{subscription.wing}}</td>
-      <td>{{subscription.flatNumber}}</td>
-      <td>{{subscription.productName}}</td>
-      <td>{{subscription.quantity}}</td>
-    </tr>
-  </table>
-</div>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-12">  
+    <h3 class="delivery-stauts">Delivery Status:{{deliveryStatus| uppercase}}
+      <button class="btn btn-primary" (click)="delivered()" *ngIf="deliveryStatus == 'pending'">
+      Click If delivered
+    </button></h3>
+  </div><!-- col-md-12 -->
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-6">
+          <div id="wingWiseReport">
+              <button class="btn btn-info" (click)="generatePDF('wingWiseReport')">Wing Wise Report 
+                <i class="fa fa-download" aria-hidden="true"></i>
+              </button>
+             <div class="wrapper-wingwise-report m-t-10">
+              <table id="tbl-wingwise-report" class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th>Wing Name</th>
+                    <th *ngFor="let product of products">{{productWiseData[product].name}}</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let d of finalWingWiseReport">
+                    <th>{{d.wing}}</th>
+                    <td *ngFor="let product of products">{{d[product]}}</td>
+                    <th>{{whingWiseTotal(d.wing)}}</th>
+                  </tr>      
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Total</th>
+                    <th *ngFor="let product of products">{{productWiseData[product].quantity}}</th>
+                  </tr>
+                </tfoot>
+              </table>
+              </div>
+              </div>
+      </div><!-- col-md-6 -->
+      <div class="col-md-6">
+          <div id="wingFlatWiseReport">
+              <button class="btn btn-info" (click)="generatePDF('wingFlatWiseReport')">
+                  Wing Flat Wise Report
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </button>
+                <div class="wrapper-flatwise-report m-t-10">
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                      <tr>
+                          <th>Wing</th>
+                          <th>flatNumber</th>
+                          <th>Product Name</th>
+                          <th>Quantity</th>
+                        </tr>
+                      </thead> 
+                      <tbody>
+                        <tr *ngFor="let subscription of subscriptions">
+                          <td>{{subscription.wing}}</td>
+                          <td>{{subscription.flatNumber}}</td>
+                          <td>{{subscription.productName}}</td>
+                          <td>{{subscription.quantity}}</td>
+                        </tr>
+                      </tbody> 
+                      </table>
+                </div><!-- wrapper-flatwise-report -->
+          </div><!-- wingFlatWiseReport -->
+      </div><!-- col-md-6 -->
+    </div><!-- row -->
+  </div><!-- col-md-12 -->
+  </div><!-- row -->
+</div><!-- container-fulid -->

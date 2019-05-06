@@ -1,28 +1,33 @@
 <div class="form-group" [formGroup]="customerForm">
-  <div class="row">
-    <div class="col-md-5">
-        <label>Enter Your Name</label>
-        <input type="text" class="form-control" formControlName="name">
-        <label>Enter Your Email Id </label>
-        <input type="text"  class="form-control" formControlName="emailId">
-        <label>Enter Your mobileNumber</label>        
-        <input type="text"  class="form-control" formControlName="mobileNumber">
-        <label>Enter Your password</label>
-        <input type="text" class="form-control" formControlName="password">
-    </div>
-    <div class="col-md-5">
-        <label>Enter Your flatNumber</label>
-        <input type="text" class="form-control" formControlName="flatNumber"> 
-        <label>Enter Your wing</label>
-        <input type="text" class="form-control" formControlName="wing"> 
-        <label>Enter Your societyName</label>
-        <input type="text" class="form-control" formControlName="societyName"> 
-        <label>Enter Your area</label>
-        <input type="text" class="form-control" formControlName="area"> 
-        <label>Enter Your city Name</label>
-        <input type="text" class="form-control" formControlName="city">         
+  <div class="card card-default m-t-10">
+    <div class="card-heading"><title>fdsfdsfds</title></div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <label>Enter Your Name</label>
+                <input type="text" class="form-control" formControlName="name">
+                <label>Enter Your Email Id </label>
+                <input type="text"  class="form-control" formControlName="emailId">
+                <label>Enter Your mobileNumber</label>        
+                <input type="text"  class="form-control" formControlName="mobileNumber">
+                <label>Enter Your password</label>
+                <input type="text" class="form-control" formControlName="password">
+            </div>
+            <div class="col-md-6">
+                <label>Enter Your flatNumber</label>
+                <input type="text" class="form-control" formControlName="flatNumber"> 
+                <label>Enter Your wing</label>
+                <input type="text" class="form-control" formControlName="wing"> 
+                <label>Enter Your societyName</label>
+                <input type="text" class="form-control" formControlName="societyName"> 
+                <label>Enter Your area</label>
+                <input type="text" class="form-control" formControlName="area"> 
+                <label>Enter Your city Name</label>
+                <input type="text" class="form-control" formControlName="city">         
+            </div>
+          </div>
+          
+          <!-- button (click)="addCustomer()">Add Customer</button -->
     </div>
   </div>
-  
-  <button (click)="addCustomer()">Add Customer</button>
 </div>

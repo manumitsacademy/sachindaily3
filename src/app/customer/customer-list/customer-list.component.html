@@ -1,9 +1,12 @@
-<table class="table table-striped table-bordered">
+<div class="wrapper-customer-list">
+<table class="table table-striped table-bordered" id="tbl-customer-list">
   <thead>
     <tr>
       <th>Name</th>
       <th>Flat Num</th>
       <th>Mobile Number</th>
+      <th>Details</th>
+      <th>Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -11,13 +14,14 @@
       <td>{{customer.name}}</td>
       <td>{{customer.mobileNumber}}</td>
       <td>{{customer.flatNumber}}</td>
-      <td><button (click)="deleteCustomer(customer._id.$oid)">Delete</button></td>
-      <td>
-        <!--<button (click)="customerDetails(customer._id.$oid)">View</button>-->
-        <!-- <a routerLink="/customer/customerDetails/{{customer}}">Details</a>-->
-        <a routerLink="/customer/customerDetails" [queryParams]="customer">Details</a>
-      </td>
+      <td width="5%">
+          <!--<button (click)="customerDetails(customer._id.$oid)">View</button>-->
+          <!-- <a routerLink="/customer/customerDetails/{{customer}}">Details</a>-->
+          <a routerLink="/customer/customerDetails" [queryParams]="customer" class="btn btn-defalut"><i class="fa fa-list-alt"></i></a>
+        </td>
+      <td width="5%"><button class="btn btn-defalut" (click)="deleteCustomer(customer._id.$oid)"><i class="fa fa-window-close"></i></button></td>
     </tr>
 
   </tbody>
 </table>
+</div>
