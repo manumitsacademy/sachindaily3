@@ -1,14 +1,23 @@
+<!-- <div *ngIf="login; else routerLink="reports""> -->
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+        <div  class="container-fluid">
+        <ul class=" nav navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="reports">Daily Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home/billing">Billing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home/customer">Customer</a>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav" style="float:right">
+          <li class="nav-item" >
+            <a class="nav-link" routerLink="/login" (click)="logout()" >Logout</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+<!-- </div> -->
 
-<nav class="navbar navbar-expand-sm bg-info navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" routerLink="reports">Daily Reports</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/billing">Billing</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/customer">Customer</a>
-    </li>
-  </ul>
-</nav>

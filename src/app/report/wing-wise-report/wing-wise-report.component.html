@@ -1,5 +1,5 @@
-
-
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<div *ngIf="!showSpinner">
 <h3>Delivery Status:{{deliveryStatus| uppercase}}
   <button (click)="delivered()" *ngIf="deliveryStatus == 'pending'">
   Click If delivered
@@ -51,4 +51,5 @@
       <td>{{subscription.quantity}}</td>
     </tr>
   </table>
+</div>
 </div>

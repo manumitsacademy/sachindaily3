@@ -20,6 +20,6 @@ export class ReportsHomeComponent implements OnInit {
   generateReport(sDate){
     console.log("Log cleared at generate Report")
     console.log(sDate);
-    this.router.navigate(['/reports/wingWiseReport'],{queryParams: sDate })
+    this.router.navigate(['/home/reports/wingWiseReport'],{queryParams: sDate })
   }
 }

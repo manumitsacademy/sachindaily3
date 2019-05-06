@@ -43,6 +43,7 @@ export class WingWiseReportComponent implements OnInit {
   finalWingWiseReport=[];
   subscriptions;
   selectedDate;
+  showSpinner: boolean = true;
   ngOnInit() {
     this.aR.queryParams.subscribe((res)=>{
       console.log(res)
@@ -138,5 +139,10 @@ export class WingWiseReportComponent implements OnInit {
       total+=a.quantity;
     })
     return total;
+  }
+  ngAfterViewChecked(): void {
+    //Called after every check of the component's view. Applies to components only.
+    //Add 'implements AfterViewChecked' to the class.
+    this.showSpinner=false;
   }
 }

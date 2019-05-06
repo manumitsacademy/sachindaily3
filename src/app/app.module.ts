@@ -13,9 +13,15 @@ import { BillingModule } from './billing/billing.module';
 import { CustomerModule } from './customer/customer.module';
 import { SubscriptionModule } from './subscription/subscription.module';
 import { DataService } from './data.service';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './auth.guard';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +31,18 @@ import { DataService } from './data.service';
     HttpClientModule,
     NgbModule,
     RouterModule.forRoot([
+      {
+        path:'login',
+        component:LoginComponent
+      },
+      {
+        path:'home',
+        component:HomeComponent,
+        canActivate: [AuthGuard]
+      },{
+        path:'',
+        component:LoginComponent
+      }
     ]),
     BrowserAnimationsModule,
     MatTableModule,
